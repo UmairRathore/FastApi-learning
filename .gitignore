@@ -8,3 +8,5 @@ __pycache__/
 #Environment packages & versions
 /venv
 requirements.txt
+
+blog-env

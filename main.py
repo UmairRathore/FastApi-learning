@@ -7,6 +7,10 @@ app = FastAPI()
 def index():
     return {"message": "Hello, World!"}
 
-@app.get("/about")
-def about():
-    return {"message": "This is the about page."}
+# @app.get("/blog/{id}")
+# def blog(id: int): #if we don't specify the type, it will be treated as a string
+#     return {"blog": id}
+
+@app.get("/blog/{id}")
+def blog(id: int):  # 👈 this must be explicitly typed
+    return {"blog": id}
